@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 5
+title: Deep Reinforcement Learning
 description: a project with a background image
 img: assets/img/1.jpg
 importance: 3
-category: fun
+category: work
 ---
 
 Every project has a beautiful feature showcase page.
