@@ -10,7 +10,7 @@ profile:
   image_circular: false # crops the image to make it circular
   address: >
     <p>Robotics Software Engineer</p>
-    <p>London</p>
+    <p>London UK</p>
 
 news: false  # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
