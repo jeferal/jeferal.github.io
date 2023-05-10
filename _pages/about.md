@@ -2,24 +2,26 @@
 layout: about
 title:
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: Robotics Software Engineer
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>Robotics Software Engineer</p>
-    <p>London</p>
+    <p>📍 London, UK<br>
+       ✉️ jeferrandiz98@gmail.com<br>
+       📞 +34 605382276<br>
+    </p>
 
 news: false  # includes a list of news items
-latest_posts: true  # includes a list of the newest posts
+latest_posts: false  # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am a `robotics passionate` always keen eager to learn and grow personal and professionally. I am really interested in `Computer Vision` and Artificial Intelligence and I am experience in both manipulation and mobile robotics due to my previous work with a collaborative rehabilitation robot, a lunar rover and a dexterous hand+arm. 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I am currently based in the unique city of `London` working for `Shadow Robot` where I work very close to the robots we have, which include a 20 DOF dexterous hand and a teleopration system with hands and arms.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Here you can take a look at my skills, projects I have been working on and some hobbies. In conclusion, anything that makes me happy in this life.

@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Force controller
-description: another without an image
-img:
+description: Implementation of an admittance controller as a rehabilitation exercise.
+img: assets/img/force_controller.png
 importance: 3
 category: work
 ---

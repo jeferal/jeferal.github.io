@@ -2,7 +2,7 @@
 layout: page
 title: ESRIC
 description: a project that redirects to another website
-img: assets/img/7.jpg
+img: assets/img/esric.jpeg
 redirect: https://unsplash.com
 importance: 3
 category: work

@@ -2,7 +2,7 @@
 layout: page
 title: ERF
 description: a project with a background image
-img: assets/img/12.jpg
+img: assets/img/erf.png
 importance: 1
 category: work
 ---

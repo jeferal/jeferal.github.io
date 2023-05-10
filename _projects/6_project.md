@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Publication Sensors
-description: a project with no image
-img:
+title: First Scientific Publication
+description: Vision-Based Hybrid Controller to Release a 4-DOF Parallel Robot from a Type II Singularity
+img: assets/img/sensors_journal.webp
 importance: 4
 category: work
 ---
