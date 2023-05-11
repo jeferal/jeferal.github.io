@@ -7,74 +7,43 @@ importance: 3
 category: work
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+This piece of work belongs to my Master's Thesis as well as to the internship I carried in a research laboratory working with parallel robots for rehabilitation purposes.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+In order to perform with robots rehabilitation exercises that are safe for the patient, it is neccessary to know and control the force that the robot is applying to the patient. Another reason to control this force is to be able to implement resistive rehabilitation exercises, where the patient needs to a apply a certain force. For these reasons, a cartessian force sensor has been incorporated to the platform of the parallel robot as seen in the following image:
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
-<div class="row">
+TODO: Make smaller and in the middle.
+<div class="col">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/force_sensor.png" title="Force sensor" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    Cartesian force sensor. It can meassure force and torque in the 6 degrees of freedom.
 </div>
-<div class="row">
+
+This parallel robot in particular has 3 degrees of freedom and the purpose of this force controller is to control the force along these three DOF, which are the height z, and 2 angles (alpha and beta) given the measurements of the force sensor. The controller is based on an admittance model, which is a model that relates the force and the position of the robot. This model will define the dynamic of the response as a mass-spring-damper system.
+<div class="col">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/admittance_model.png" title="Admittance model" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    Admittance model.
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
+The force controller is implemented as an outer loop of the position controller that has already been implemented. There are two variations:
 
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+<div class="col">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/admittance_control_v1.png" title="Admittance control v1" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/admittance_control_v2.png" title="Admittance control v2" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
 
+The first version is simpler to understand, the admittance model would receive the force error as the input and would output a cartesian position. This cartesian position is added to the actual cartesian reference of the robot as an increment and then inverse kinematics is perform to obtain the joint angles that will be fed to the position control loop.
+The second version, rather than adding the increment of position in cartesian space, the admitance model would output a velocity in cartesian space, which by mean of the Jacobian matrix this is translated into the joint space. The joint increment to add to the joint state reference is obtained by integrating this velocity.
+The result can be seen in the following video:
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
+<iframe width="420" height="315" src="http://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
