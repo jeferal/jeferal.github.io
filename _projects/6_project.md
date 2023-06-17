@@ -1,9 +1,9 @@
 ---
 layout: page
-title: First Scientific Publication
-description: Vision-Based Hybrid Controller to Release a 4-DOF Parallel Robot from a Type II Singularity
-img: assets/img/sensors_journal.webp
-importance: 4
+title: Deep Reinforcement Learning
+description: An implementation of position controllers for parallel robots based on Machine Learning
+img: assets/img/deep_rl.png
+importance: 6
 category: work
 ---
 

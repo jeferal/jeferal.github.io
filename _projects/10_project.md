@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Force controller
-description: Implementation of an admittance controller as a rehabilitation exercise
-img: assets/img/force_controller.png
-importance: 6
+title: Sensor Integration
+description: Overview of a sensor integration for a SLAM architecture
+img: assets/img/velodyne.jpeg
+importance: 5
 category: work
 ---
 

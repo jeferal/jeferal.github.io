@@ -1,9 +1,9 @@
 ---
 layout: page
-title: ERF 2023
-description: The European Robotics Forum 2023 in Odense, Denmark
-img: assets/img/erf.png
-importance: 2
+title: First Scientific Publication
+description: Vision-Based Hybrid Controller to Release a 4-DOF Parallel Robot from a Type II Singularity
+img: assets/img/mocap_parallel_robot.png
+importance: 7
 category: work
 ---
 

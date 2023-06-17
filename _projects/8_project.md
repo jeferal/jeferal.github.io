@@ -1,9 +1,9 @@
 ---
 layout: page
-title: ERF 2023
-description: The European Robotics Forum 2023 in Odense, Denmark
-img: assets/img/erf.png
-importance: 2
+title: Master's Thesis
+description: Implementation of modular position/force controllers based on ROS2 for lower member rehabilitation parallel robots
+img: assets/img/masters_thesis.png
+importance: 5
 category: work
 ---
 

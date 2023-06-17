@@ -1,9 +1,8 @@
 ---
 layout: page
-title: ESRIC
-description: a project that redirects to another website
-img: assets/img/esric.jpeg
-redirect: https://unsplash.com
+title: Dexterity
+description: Overview of the Shadow Dexterous Hand
+img: assets/img/shadow_dexterous_hand.png
 importance: 3
 category: work
 ---

@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Force controller
-description: Implementation of an admittance controller as a rehabilitation exercise
-img: assets/img/force_controller.png
-importance: 6
+title: Bachelor's Thesis
+description: Implementation of dynamic controllers for a 4DOF parallel robot by a real time embedded industrial controller and an FPGA
+img: assets/img/compact_rio.png
+importance: 11
 category: work
 ---
 

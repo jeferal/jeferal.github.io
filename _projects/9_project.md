@@ -1,9 +1,9 @@
 ---
 layout: page
-title: ERF 2023
-description: The European Robotics Forum 2023 in Odense, Denmark
-img: assets/img/erf.png
-importance: 2
+title: Web GUI to control a ROS2 robot
+description: Implementation of a web GUI to control a rehabilitation parallel robot
+img: assets/img/web_based_gui.jpeg
+importance: 9
 category: work
 ---
 

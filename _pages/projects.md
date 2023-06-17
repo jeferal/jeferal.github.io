@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Projects
-permalink: /projects/
-description: A growing collection of your cool projects.
+title: Experiences
+permalink: /experiences/
+description: Some experiences to show all the robots and systems I have worked with.
 nav: true
 nav_order: 2
 display_categories: [work]

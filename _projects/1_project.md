@@ -1,8 +1,8 @@
 ---
 layout: page
-title: ERF
-description: a project with a background image
-img: assets/img/erf.png
+title: ICRA 2023
+description: Showcasing the Shadow teleoperation system in London
+img: assets/img/icra.jpeg
 importance: 1
 category: work
 ---

@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Force controller
-description: Implementation of an admittance controller as a rehabilitation exercise
-img: assets/img/force_controller.png
-importance: 6
+title: Pong in an FPGA with VHDL
+description: Project to implement the pong game in a Terasic FPGA through VHDL
+img: assets/img/pong_fpga.png
+importance: 12
 category: work
 ---
 
