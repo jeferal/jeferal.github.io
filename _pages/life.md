@@ -25,20 +25,18 @@ the technical tricks, but also `creativity` to improvise or create new combinati
         allowfullscreen>
     </iframe>
 </p>
-<p align="center">
+<div class="caption">
 *Freestyle Slalom improvisation in Bois de la Cambre (Brussels)*
-</p>
-
+</div>
 Back in Spain I used to `teach people` how to do slalom and also I used to go to `competitions` in a national level. Nowadays, this is a very important hobby for me an I practice weekly in `Hyde Park` when the weather allows me :-).
-
 
 <p align="center">
   <img width="460" height="400" src="/assets/img/corvo.jpeg">
 </p>
 
-<p align="center">
+<div class="caption">
 *One of the sitting tricks, the Corvo*
-</p>
+</div>
 
 London has thankfully an amazing skating community and this is also one of the reasons why I decided to live here. We help each other to learn more and also there are events every week to skate around London with music.
 During the winter season, it is more difficult to skate outside, so I practice `table tennis` instead in a club where there are social jump ins.
@@ -54,9 +52,9 @@ neighbourhoods to discover, events to go and people to get to know.
 On top of this I try arrange trips every year to explore new countries. The most recent country I have visited is `Iceland`:
 
 ![iceland](/assets/img/iceland.jpeg){:style="display:block; margin-left:auto; margin-right:auto width="800" height="600""}
-<p align="center">
+<div class="caption">
 *Gullfoss waterfall Iceland*
-</p>
+</div>
 
 ## Reading
 I might not have been a big reader in the past, but now reading is substituting the time I used to spend watching series before going to sleep. I think it all started with `me reading in the tube`. I love `science fiction` and also reading about `physics`.

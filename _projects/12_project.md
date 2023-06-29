@@ -7,43 +7,48 @@ importance: 12
 category: work
 ---
 
-This piece of work belongs to my Master's Thesis as well as to the internship I carried in a research laboratory working with parallel robots for rehabilitation purposes.
+During my last year of the Bachelor's I had one course fully dedicated to understand and learn to program on an FPGA. The language that was used for this purpose was VHDL
+and the board that we used was the FPGA Max 10 DE10-Lite. This board contains an Altera MAX 10 FPGA.
 
-In order to perform with robots rehabilitation exercises that are safe for the patient, it is neccessary to know and control the force that the robot is applying to the patient. Another reason to control this force is to be able to implement resistive rehabilitation exercises, where the patient needs to a apply a certain force. For these reasons, a cartessian force sensor has been incorporated to the platform of the parallel robot as seen in the following image:
-
-TODO: Make smaller and in the middle.
-<div class="col">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/force_sensor.png" title="Force sensor" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
+<p align="center">
+  <img width="400" height="300" src="/assets/img/fpga_max_10_layout.jpeg">
+</p>
 <div class="caption">
-    Cartesian force sensor. It can meassure force and torque in the 6 degrees of freedom.
+    FPGA Max 10 DE10-Lite board - Terasic Technologies (mouser)
 </div>
 
-This parallel robot in particular has 3 degrees of freedom and the purpose of this force controller is to control the force along these three DOF, which are the height z, and 2 angles (alpha and beta) given the measurements of the force sensor. The controller is based on an admittance model, which is a model that relates the force and the position of the robot. This model will define the dynamic of the response as a mass-spring-damper system.
-<div class="col">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/admittance_model.png" title="Admittance model" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
+As you can see the board contains not only the FPGA, but also many peripherals to implement real applications and practice. Some of them can also be identified in this connection diagram:
+
+<p align="center">
+  <img width="500" height="300" src="/assets/img/terasic_block_diagram.webp">
+</p>
 <div class="caption">
-    Admittance model.
+    10 DE10-Lite board - Terasic Technologies - Diagram (mouser)
 </div>
 
-The force controller is implemented as an outer loop of the position controller that has already been implemented. There are two variations:
+We used the Intel Quartus Prime as the software editor and synthesizer to program the FPGA. The course was very practic and after many lab lessons, we had to develop a final project. For this project I decided to
+implement the pong game in the FPGA so that I can get also familiar with one of the peripherals, the VGA interface. In a few words, this game contains a VGA driver for the FPGA an image generator and a score shown in 7-segment
+displays. Many challenges that were fun to solve where the VGA driver where I got familiar on how an image is generated through this kind of interface and screens and also modelling the behaviour of the ball, collisions and how it bounces. The following video shows the game:
 
-<div class="col">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/admittance_control_v1.png" title="Admittance control v1" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/admittance_control_v2.png" title="Admittance control v2" class="img-fluid rounded z-depth-1" %}
-    </div>
+<p align="center">
+    <iframe width="600" height="400"
+        src="https://youtube.com/embed/hZkz6tCa-Tc"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+    </iframe>
+</p>
+<div class="caption">
+Presetation of the pong game in the FPGA
 </div>
 
-The first version is simpler to understand, the admittance model would receive the force error as the input and would output a cartesian position. This cartesian position is added to the actual cartesian reference of the robot as an increment and then inverse kinematics is perform to obtain the joint angles that will be fed to the position control loop.
-The second version, rather than adding the increment of position in cartesian space, the admitance model would output a velocity in cartesian space, which by mean of the Jacobian matrix this is translated into the joint space. The joint increment to add to the joint state reference is obtained by integrating this velocity.
-The result can be seen in the following video:
+And this is the code of the project:
 
-<iframe width="420" height="315" src="http://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+{% if site.data.repositories.github_repos %}
+<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
+  {% for repo in site.data.repositories.github_repos %}
+    {% include repository/repo.html repository=repo %}
+  {% endfor %}
+</div>
+{% endif %}
