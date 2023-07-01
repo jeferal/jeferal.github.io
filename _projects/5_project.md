@@ -42,7 +42,7 @@ The result can be seen in the following video:
 
 <p align="center">
     <iframe width="315" height="560"
-        src="https://youtube.com/embed/dQw4w9WgXcQ"
+        src="https://youtube.com/embed/"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -50,5 +50,5 @@ The result can be seen in the following video:
     </iframe>
 </p>
 <div class="caption">
-Freestyle Slalom improvisation in Bois de la Cambre (Brussels)
+Resistive rehabilitation exercise with the force controller.
 </div>
