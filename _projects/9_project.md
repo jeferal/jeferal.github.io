@@ -7,74 +7,46 @@ importance: 9
 category: work
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+One of the proposed tasks during the internship I carried out at [ai2.upv](https://www.ai2.upv.es/en/home-english/) was to implement a Graphical User Interface
+for the parallel robots with the control architecture that I implemented through ROS2. The aim of this task was to propose an architecture and create a
+prototype of a GUI to show that is possible rather than implementing a very complex one, that would be for future work.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+One of the first decisions that was made was to implement this GUI as a web application. This way the compatibility with different devices is much more flexible than implementing a QT application for example.
+An operator would be able to control the robot from a computer or even a tablet as long as it has a web browser and access to the lab's network.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+The implemented architecture is based on the [ROS2 Web Bridge](https://github.com/RobotWebTools/ros2-web-bridge), which at the moment is not maintained anymore (this GUI was implemented in 2020), but the package
+[ROSBridge suite](https://github.com/RobotWebTools/rosbridge_suite) should be capable of doing the same. Anyway, ROS2 Web Bridge is a package that can convert the information from ROS2 topics to web sockets. It can also handle
+ROS2 service, but it can not handle actions.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
+In the following diagram we can see the architecture of the control scheme and also the web application:
+
+<p align="center">
+  <img width="600" height="300" src="/assets/img/ros2_web_flow.png">
+</p>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    Web GUI for a rehabilitation robot basic architecture
 </div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
+
+The architecture includes:
+* The Robot
+* Control Computer
+* `ROS2 Web Bridge`: Translates the ROS2 topics and services to web sockets.
+* `Web Server`: Provides a client with the web application.
+* `Rehabilitation exercises server`: Provides a client with rehabilitation exercices. There is an API that interfaces between the client and the database that contains the exercises, which was implemented through NodeJS.
+* `Database`: Database that contains rehabilitation exercises hosted by mySQL.
+
+As you can see, there are different technologies that were used. First of all `SQL` to create the database, `NodeJS` to interface with the database and provide the API and also the framework `ReactJS` to create the web application.
+Graphically, this is the result of the application.
+
+<p align="center">
+  <img width="600" height="350" src="/assets/img/web_based_gui.jpeg">
+</p>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    Web GUI result
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
+It is possible to select the rehabilitation exercise to execute. Also, if the user wanted to control the 3DOF robot or the 4DOF robot that were available in the laboratory and start and stop the robot. Finally, the user would be able to visualize the trajectory while it was performed by the robot. As mentioned before, this is a prototype. For future work, someone would also first consider who the user of such application would be.
+For instance, a doctor might not need to visualize with such detail the trajectory of the robot, but an engineer to check the status of the robot might need so.
 
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
+Another thing to consider would be security, the application should implement a way of
+bringing the robot to a home position and also consider network security aspects.
