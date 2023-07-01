@@ -35,7 +35,7 @@ Back in Spain I used to `teach people` how to do slalom and also I used to go to
 </p>
 
 <div class="caption">
-*One of the sitting tricks, the Corvo*
+One of the sitting tricks, the Corvo
 </div>
 
 London has thankfully an amazing skating community and this is also one of the reasons why I decided to live here. We help each other to learn more and also there are events every week to skate around London with music.
@@ -53,7 +53,7 @@ On top of this I try arrange trips every year to explore new countries. The most
 
 ![iceland](/assets/img/iceland.jpeg){:style="display:block; margin-left:auto; margin-right:auto width="800" height="600""}
 <div class="caption">
-*Gullfoss waterfall Iceland*
+Gullfoss waterfall Iceland
 </div>
 
 ## Reading
