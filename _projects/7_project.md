@@ -7,74 +7,51 @@ importance: 7
 category: work
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+During my Internship in [ai2.upv](https://www.ai2.upv.es/en/home-english/) I contributed to a research paper that was also part of my `Master's Thesis`. The paper was published in `MDPI Sensors` and it is available [here](https://www.mdpi.com/1424-8220/21/12/4080). I contributed by implementing the proposed novel controller, which also makes use of control architecture that I implemented in `ROS2` with `C++ (mostly)` and `Python`.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+This paper introduces a novel `hybrid controller for a 4-DOF parallel` robot that is able to detect when the robot is in a `type II singular` position and brings the robot back to a safe configuration. This is very important in the context of `rehabilitation robots`, since there is the possibility of losing control of the robot and making the robot not safe enough for a patient. Solving this type of issues would make a parallel robot more suitable for rehabilitation purposes because they have the advantages of
+having a high accuracy as well as a better dynamic performance than serial robots.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+This particular controller uses a external sensor to track the position and orientation of the platform. The external sensor used was the `motion capture system Optitrack`. So I implemented first a `driver` to be able to read the data coming from Optitrack and be able to feed the controller with the `cartesian pose of the platform`. The arrangement of the cameras in the laboratory can be seen in the following image:
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
+<p align="center">
+  <img width="500" height="400" src="/assets/img/optitrack_lab.png">
+</p>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+Optitrack set-up in the laboratory. Vision-Based Hybrid Controller to Release a 4-DOF Parallel Robot from a Type II Singularity.
 </div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
+
+There is this need of having an external sensor because computing Forward Kinematics based on the joint sensors is not possible in a singular position because computing the Jacobian matrix would have numerical innestabilities. As a reminder, Forward Kinematics is the difficult problem in parallel robots (opposite to serial where the difficult one is Inverse Kinematics) and we need a Numerical algorithm that makes use of the Jacobian matrix.
+After this, the Type II Singularity Control Module was able to work on top of the position controller to detect first if the robot was in a Type II Singular position and release the robot from this configuration. The control scheme can be visualized in the following diagram:
+
+<p align="center">
+  <img width="500" height="300" src="/assets/img/singularity_releaser.png">
+</p>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+Type II Singularity Control Module. Vision-Based Hybrid Controller to Release a 4-DOF Parallel Robot from a Type II Singularity.
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
+Finally, a demonstration of the controller working on the real robot can be seen in this video:
 
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
+<p align="center">
+    <iframe width="728" height="410"
+        src="https://www.youtube.com/embed/fpZMfLe9lRg"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+    </iframe>
+</p>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+Demonstration in the real robot. Vision-Based Hybrid Controller to Release a 4-DOF Parallel Robot from a Type II Singularity.
 </div>
 
+Reference:
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
+[Vision-Based Hybrid Controller to Release a 4-DOF Parallel Robot from a Type II Singularity](https://www.mdpi.com/1424-8220/21/12/4080)
+* José L. Pulloquinga
+* Rafael J. Escarabajal
+* Jesús Ferrándiz
+* Marina Vallés
+* Vicente Mata
+* Mónica Urizar
