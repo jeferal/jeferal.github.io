@@ -13,3 +13,10 @@ category: work
 <div class="caption">
     3D Lidar Velodyne.
 </div>
+
+<p align="center">
+  <img width="500" height="400" src="/assets/img/luvmix.jpeg">
+</p>
+<div class="caption">
+    3D Lidar Velodyne.
+</div>

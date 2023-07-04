@@ -7,43 +7,38 @@ importance: 11
 category: work
 ---
 
-This piece of work belongs to my Master's Thesis as well as to the internship I carried in a research laboratory working with parallel robots for rehabilitation purposes.
+I remember that before starting my work on the Bachelor's Thesis I was usnure of focusing my career on robotics although it was something that really interted me before. Due to my interest in the course on `Advanced Computer Control` I asked the profesor if they were proposing any Thesis related to this in any laboratory. I was lucky enough that it was the case and this is where I started working on parallel robots for rehabilitation purposes with Marina Vallés.
 
-In order to perform with robots rehabilitation exercises that are safe for the patient, it is neccessary to know and control the force that the robot is applying to the patient. Another reason to control this force is to be able to implement resistive rehabilitation exercises, where the patient needs to a apply a certain force. For these reasons, a cartessian force sensor has been incorporated to the platform of the parallel robot as seen in the following image:
+The purpose of this Bachelor's Thesis was to implement a control architecture for 4DOF parallel robots through a `real time embedded industrial controller and an FPGA`. This controller was the `Compact-RIO` from National Instrument whose CPU and FPGA were programmable by the language `LAB-VIEW`.
 
-TODO: Make smaller and in the middle.
-<div class="col">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/force_sensor.png" title="Force sensor" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
+<p align="center">
+  <img width="350" height="280" src="/assets/img/compact_rio.png">
+</p>
 <div class="caption">
-    Cartesian force sensor. It can meassure force and torque in the 6 degrees of freedom.
+    The system NI CompactRIO.
 </div>
 
-This parallel robot in particular has 3 degrees of freedom and the purpose of this force controller is to control the force along these three DOF, which are the height z, and 2 angles (alpha and beta) given the measurements of the force sensor. The controller is based on an admittance model, which is a model that relates the force and the position of the robot. This model will define the dynamic of the response as a mass-spring-damper system.
-<div class="col">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/admittance_model.png" title="Admittance model" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
+I loved solving all sort of problems related to a distributed real time control architecture, such as:
+* Implementing a `buffer` in the Compact Rio to store trajectory points that were sent form the host and do not lose them.
+* Measuring the `latency` in the communication between the Compact Rio and the host.
+* Measuing important `variables in the control loop` like: position error, control action, proportional action, derivative action, gravity compensation action, etc.
+* Implementing a controller that was not only based on a PID, but also was able to `compensate gravity`.
+* Creating an `abstract enough interface` to be able to test the software and hardware on `simulation` (`MATLAB / Simulink`) as if it was the real robot.
+
+One of the advantages of using LabView is that it is very easy to create a Graphical User Interface to control the robot and also to visualize important variables in the system. This was the result:
+
+<p align="center">
+  <img width="600" height="300" src="/assets/img/crio_gui_1.png">
+</p>
 <div class="caption">
-    Admittance model.
+    Graphical user interface 1 with LabView.
 </div>
 
-The force controller is implemented as an outer loop of the position controller that has already been implemented. There are two variations:
-
-<div class="col">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/admittance_control_v1.png" title="Admittance control v1" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/admittance_control_v2.png" title="Admittance control v2" class="img-fluid rounded z-depth-1" %}
-    </div>
+<p align="center">
+  <img width="600" height="350" src="/assets/img/crio_gui_2.png">
+</p>
+<div class="caption">
+    Graphical user interface 2 with LabView.
 </div>
 
-The first version is simpler to understand, the admittance model would receive the force error as the input and would output a cartesian position. This cartesian position is added to the actual cartesian reference of the robot as an increment and then inverse kinematics is perform to obtain the joint angles that will be fed to the position control loop.
-The second version, rather than adding the increment of position in cartesian space, the admitance model would output a velocity in cartesian space, which by mean of the Jacobian matrix this is translated into the joint space. The joint increment to add to the joint state reference is obtained by integrating this velocity.
-The result can be seen in the following video:
-
-<iframe width="420" height="315" src="http://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+Programming in LabView works different than a standard programming language. It basically consists of connecting blocks (functions) through wires. It was a valuable experience, but I personally prefer standard programming languages.

@@ -8,7 +8,9 @@ category: work
 ---
 
 I carried my Master's Thesis in a research laboratory that belonged to a research institute [ai2.upv](https://www.ai2.upv.es/en/home-english/) were I was also taking an internship. The aim of the Thesis was to implement modular position/force controllers
-based on ROS2 for lower member rehabilitation parallel robots. I have been discussing in other posts some other implementation, but here you will find a summary of what my Thesis covered.
+based on ROS2 for lower member rehabilitation parallel robots.
+After defending the Master's Thesis, it was qualified with the highest grade 10/10 and with a `Special Mention`.
+I have been discussing in other posts some other implementation, but here you will find a summary of what my Thesis covered.
 
 ### 1. Parallel robots for rehabilitation and control hardware
 As mention in the title, I worked with parallel robots for rehabilitation purposes of the lower member: ankle 3DOF, knee and ankle 4DOF. Parallel robots have the advantage that they are more accurate and have a better stiffness and strength/weight ratio

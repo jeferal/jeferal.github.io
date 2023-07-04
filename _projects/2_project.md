@@ -40,5 +40,5 @@ Shadow Teleoperation system showcase at the European Robotics Forum 2023.
   <img width="400" height="300" src="/assets/img/robotnik_robot.jpeg">
 </p>
 <div class="caption">
-Robotnik Karios - Wooden version.
+    Robotnik Karios - Wooden version.
 </div>
