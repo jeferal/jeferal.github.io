@@ -65,3 +65,20 @@
       description:
         - 9.8 on the Final Project which was based on implementing dynamic controllers for an industrial robot with a Real Time embedded system and an FPGA.
         - 9.1/10 Average grade, awarded to best academic records of third year and achieved 16 Special Mentions.
+
+- title: Academic Interests
+  type: nested_list
+  contents:
+    - title: Courses
+      items: 
+        - Self-Driving Cars Specialization
+        - Mastering Data Structures & Algorithms using C and C++
+        - Deep Learning applied to Signal and Image Analysis
+        - Intro to Robot Programming ROS
+        - "Computer vision introduction: application development with OpenCV"
+    - title: Readings
+      items:
+        - Deep Reinforcement Learning with Python
+        - Artificial Intelligence with Python
+        - Advanced Deep Learning with Python
+        - Probabilistic Robotics
