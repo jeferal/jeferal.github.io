@@ -29,7 +29,7 @@ Our team succeeded and we were selected to participate in the next round.
     LUVMI-X together with the Leo Rovers.
 </div>
 
-Finally, we were lucky enough to have a tour as part of the competition to ESTEC where we saw many historical ships and what most excited me, the Planetary lab:
+Finally, we were lucky enough to have a tour as part of the competition to ESTEC where we saw many historical ships and what most excited me, the Automation & Robotics laboratory:
 
 <p align="center">
   <img width="500" height="500" src="/assets/img/esa_esric_3.jpeg">
