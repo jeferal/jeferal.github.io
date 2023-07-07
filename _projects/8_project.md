@@ -41,12 +41,15 @@ There was a need to implement a control architecture that was based in a real ti
 </div>
 
 ### 3. Position Controller
+This diagram shows the architecture of the implemented position controller. It is based on a standard PD algorithm and on a compensation of gravity.
 <p align="center">
   <img width="600" height="300" src="/assets/img/pdg_diagram.png">
 </p>
 <div class="caption">
     Diagram of the position controller PD + Gravity Compensation.
 </div>
+
+Demonstration of the result:
 
 <p align="center">
     <iframe width="560" height="315"
@@ -61,11 +64,23 @@ There was a need to implement a control architecture that was based in a real ti
     Position Controllers PD + Gravity Compensation.
 </div>
 
+The following plots show important variables that are used to evaluate the control performance. To tune the controller, the accumulation of each position error and also the accumulation of the increment of the control action was used.
+
 {% include figure.html path="assets/img/position_trajectory.png" title="example image" class="img-fluid rounded z-depth-1" %}
+<div class="caption">
+    PD + Gravity compensation - Desired trajectory and measured in joint space.
+</div>
 {% include figure.html path="assets/img/position_error.png" title="example image" class="img-fluid rounded z-depth-1" %}
+<div class="caption">
+    PD + Gravity compensation - Desired trajectory and measured in joint space position error.
+</div>
 {% include figure.html path="assets/img/control_action.png" title="example image" class="img-fluid rounded z-depth-1" %}
+<div class="caption">
+    PD + Gravity compensation - Control action.
+</div>
 
 ### 4. More complex controllers and GUI
+In this post I have only introduced my Master's Thesis, in the following posts you can also read about particular controllers and implementations that my MS Thesis also covered:
 * [Force controllers](/projects/5_project/)
 * [Type II Singularity Releaser](/projects/7_project/)
 * [Position Controller based on Deep Reinforcement Learning](/projects/6_project/)
