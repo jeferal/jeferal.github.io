@@ -20,7 +20,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a `robotics passionate` always eager to learn and grow personal and professionally. I am really interested in `Computer Vision` and Artificial Intelligence and I am experience in both `manipulation` and `mobile robotics` due to my previous work with a collaborative rehabilitation robot, a lunar rover and a dexterous hand+arm. 
+I am a `Robotics and Software passionate` always eager to learn and grow personal and professionally. I am really interested in `Computer Vision` and Artificial Intelligence and I am experience in both `manipulation` and `navigation` due to my previous work with a collaborative rehabilitation robot, a lunar rover and a dexterous hand+arm. 
 
 I am currently based in the unique city of `London` working for `Shadow Robot` where I work very close to the robots we have, which include a 20 DOF dexterous hand and a teleopration system with hands and arms.
 

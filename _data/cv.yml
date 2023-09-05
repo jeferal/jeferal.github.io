@@ -15,11 +15,15 @@
       institution: Shadow Robot Company
       year: Feb 2022 - Present
       description:
-        - Commercial C++ and Python development for the Shadow Hand and the teleoperation system. Unit tests, manipulation, planning, kinematics, QT GUI's and real time control..
+        - Commercial C++ and Python development for the Shadow Hand and the teleoperation system. Unit tests, manipulation, planning, kinematics, QT GUI's and real time control.
+        - Unit Testing (Google test, rostest) debugging and profiling (gbd, valgrind) and testing the integration of SW with the real robots.
+        - "Robotics: Manipulation, planning, kinematics, control."
+        - Accountable of Software support of Shadow products.
         - title: Skills.
           contents:
-            - C++, Python
-            - ROS
+            - Modern C++, Python
+            - ROS (noetic)
+            - Ubuntu and docker
             - Agile
     - title: Robotics Software Intern
       institution: Space Applications Services
@@ -66,7 +70,7 @@
         - 9.8 on the Final Project which was based on implementing dynamic controllers for an industrial robot with a Real Time embedded system and an FPGA.
         - 9.1/10 Average grade, awarded to best academic records of third year and achieved 16 Special Mentions.
 
-- title: Academic Interests
+- title: Further Education
   type: nested_list
   contents:
     - title: Courses
@@ -78,6 +82,8 @@
         - "Computer vision introduction: application development with OpenCV"
     - title: Readings
       items:
+        - (Currently reading) Hands-On Design Patterns with C++
+        - Effective Modern C++
         - Deep Reinforcement Learning with Python
         - Artificial Intelligence with Python
         - Advanced Deep Learning with Python
