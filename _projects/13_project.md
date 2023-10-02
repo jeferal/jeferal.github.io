@@ -3,7 +3,7 @@ layout: page
 title: Accelerate OpenCV with GPU, CUDA and CUDNN
 description: Compiling OpenCV 4.8.0 with CUDA and CUDNN support and benchmarking with OpenCV Zoo.
 img: assets/img/dasiam_inference.png
-importance: 1
+importance: 2
 category: work
 ---
 

@@ -3,7 +3,7 @@ layout: page
 title: ERF 2023
 description: The European Robotics Forum 2023 in Odense, Denmark
 img: assets/img/erf.png
-importance: 2
+importance: 3
 category: work
 ---
 

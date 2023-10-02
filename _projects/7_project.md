@@ -1,6 +1,6 @@
 ---
 layout: page
-title: First Scientific Publication
+title: Publication on MDPI Sensors
 description: Vision-Based Hybrid Controller to Release a 4-DOF Parallel Robot from a Type II Singularity
 img: assets/img/mocap_parallel_robot.png
 importance: 7
