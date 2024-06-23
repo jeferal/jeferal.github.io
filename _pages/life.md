@@ -26,12 +26,12 @@ the technical tricks, but also `creativity` to improvise or create new combinati
     </iframe>
 </p>
 <div class="caption">
-*Freestyle Slalom improvisation in Bois de la Cambre (Brussels)*
+Freestyle Slalom improvisation in Bois de la Cambre (Brussels)
 </div>
 Back in Spain I used to `teach people` how to do slalom and also I used to go to `competitions` in a national level. Nowadays, this is a very important hobby for me an I practice weekly in `Hyde Park` when the weather allows me :-).
 
 <p align="center">
-  <img width="460" height="400" src="/assets/img/corvo.jpeg">
+  <img width="70%" height="70%" src="/assets/img/corvo.jpeg">
 </p>
 
 <div class="caption">
@@ -51,7 +51,9 @@ neighbourhoods to discover, events to go and people to get to know.
 
 On top of this I try arrange trips every year to explore new countries. The most recent country I have visited is `Iceland`:
 
-![iceland](/assets/img/iceland.jpeg){:style="display:block; margin-left:auto; margin-right:auto width="800" height="600""}
+<p align="center">
+  <img width="100%" height="100%" src="/assets/img/iceland.jpeg">
+</p>
 <div class="caption">
 Gullfoss waterfall Iceland
 </div>

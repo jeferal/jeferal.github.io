@@ -9,7 +9,7 @@ profile:
   image: prof_pic_2.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>📍 London, UK<br>
+    <p>📍 Barcelona, Spain<br>
        ✉️ jeferrandiz98@gmail.com<br>
        📞 +34 605382276<br>
     </p>
@@ -22,9 +22,9 @@ social: true  # includes social icons at the bottom of the page
 
 I am a `Robotics and Software passionate` always eager to learn and grow personal and professionally. I am really interested in `Computer Vision` and Artificial Intelligence and I am experience in both `manipulation` and `navigation` due to my previous work with a collaborative rehabilitation robot, a lunar rover and a dexterous hand+arm. 
 
-I am currently based in the unique city of `London` working for `Shadow Robot` where I work very close to the robots we have, which include a 20 DOF dexterous hand and a teleopration system with hands and arms.
+I am currently based in the city of `Barcelona` working for `Keybotic` on an fully autonomous quadruped robot for industrial inspections. At the same time I am studying a Postgraduate course on `Artificial Intelligence with Deep Learning` at the [UPC](https://www.upc.edu/ca).
 
-As a summary, I count with `almost 3` years of experience working with:
+As a summary, I count with `almost 4` years of experience working with:
 * C++
 * Python
 * ROS and ROS2

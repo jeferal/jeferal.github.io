@@ -12,8 +12,24 @@
   type: time_table
   contents:
     - title: Robotics Software Engineer
-      institution: Shadow Robot Company
-      year: Feb 2022 - Present
+      institution: Keybotic - Barcelona
+      year: Jan 2024 - Present
+      description:
+        - C++ and Python development for a quadruped robot for autonomous industrial inspection.
+        - Implemented tools to automatically calibrate the robot and validate components.
+        - Working on implementing solutions based on Deep Learning algorithms with Pytorch and
+          tools to handle large ammount of data.
+        - title: Skills.
+          contents:
+            - Modern C++, Python
+            - Deep Learning, Computer Vision, Pytorch
+            - ROS (noetic)
+            - Ubuntu and docker
+            - Agile
+      image: /assets/img/keyper.jpg
+    - title: Robotics Software Engineer
+      institution: Shadow Robot Company - London
+      year: Feb 2022 - Dec 2023
       description:
         - Commercial C++ and Python development for the Shadow Hand and the teleoperation system. Unit tests, manipulation, planning, kinematics, QT GUI's and real time control.
         - Unit Testing (Google test, rostest) debugging and profiling (gbd, valgrind) and testing the integration of SW with the real robots.
@@ -25,8 +41,9 @@
             - ROS (noetic)
             - Ubuntu and docker
             - Agile
+      image: /assets/img/icra.jpeg
     - title: Robotics Software Intern
-      institution: Space Applications Services
+      institution: Space Applications Services - Brussels
       year: Aug 2021 - Feb 2022
       description:
         - Implemented a SLAM navigation architecture for a Lunar Rover, including traversability mapping, Lidar/Depth camera PC processing, localization and path planning.
@@ -38,9 +55,11 @@
             - Localization
             - Path planning
             - "Perception: Lidar, Depth cameras"
+      image: /assets/img/luvmix.jpg
     - title: Robotics Software Intern
-      institution: Instituto Universitario de Automática e Informática Industrial.
+      institution: Instituto Universitario de Automática e Informática Industrial - Valencia
       year: Oct 2020 - Jul 2021
+      image: /assets/img/masters_thesis.png
       description:
         - Implemented a control architecture for rehabilitation robots based on ROS2, including position and force controllers.
         - Author of Q1 publication, implemented controllers based on Deep Reinforcement Learning algorithms (TRPO and PPO) and worked with a motion capture system (Optitrack)
@@ -54,6 +73,19 @@
 - title: Education
   type: time_table
   contents:
+    - title: Postgraduate course in Artificial Intelligence with Deep Learning
+      institution: Polytechnic University of Catalunya
+      year: 2024 - Currently
+      description:
+        - Pytorch
+        - Final project based on large Poing Cloud (indoor scenes and airbone lidar) classification and segmentation
+        - title: Relevant courses.
+          contents:
+            - Deep Learning, self-supervised learning.
+            - Computer Vision.
+            - Reinforcement Learning.
+            - Natural Language Processing.
+            - Audio Processing.
     - title: Master's Degree in Automation and Industrial Computing
       institution: Polytechnic University of Valencia
       year: 2020 - 2021
