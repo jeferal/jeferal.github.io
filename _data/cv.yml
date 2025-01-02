@@ -82,7 +82,10 @@
         - "Computer vision introduction: application development with OpenCV"
     - title: Readings
       items:
-        - (Currently reading) Hands-On Design Patterns with C++
+        - (Currently reading) Machine Learning Engineering
+        - Dive into Deep Learning
+        - Python Data Science Handbook
+        - Hands-On Design Patterns with C++
         - Effective Modern C++
         - Deep Reinforcement Learning with Python
         - Artificial Intelligence with Python
